@@ -1,0 +1,35 @@
+@startuml 001-create-contacts-list
+
+title "001 - Create contacts list"
+
+actor User
+participant "Platform" as PL #MistyRose
+participant Browser #MintCream
+participant "Contacts Manager API" as CNT #Plum
+participant "Contacts Manager DB" as CNT_DB #Plum
+
+User -> Browser : Open platform webpage
+Browser -> PL : GET /index.html
+
+User -> PL: Clicks create contacts list button
+PL -> Browser: Generate private and public key
+Browser --> Browser: Save public key in local database
+Browser --> Browser: Save private key in local database
+Browser --> Browser: Download private key
+Browser --> PL: Returns public key
+PL --> User: Render contacts list page
+
+User -> PL: Fills contact information
+PL -> Browser: Save contact in local database
+
+User -> PL: Clicks save contacts button
+PL -> Browser: Encrypt local database with private key
+Browser --> Browser: Generate document reference with public key
+Browser --> PL: JSON { encrypted contacts list }
+PL -> CNT: POST /contacts JSON { encrypted contacts list }
+CNT -> CNT_DB: Save JSON
+CNT_DB --> CNT: Saved document reference
+CNT --> PL: JSON { document reference }
+PL --> User: Render saved contacts list link
+
+@enduml

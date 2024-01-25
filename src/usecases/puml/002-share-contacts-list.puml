@@ -1,0 +1,20 @@
+@startuml 002-share-contacts-list
+
+title "001 - Share contacts list"
+
+actor User
+participant "Platform" as PL #MistyRose
+participant Browser #MintCream
+
+User -> Browser : Open platform webpage
+Browser -> PL : GET /index.html
+PL --> User: Render created contacts lists
+
+User -> PL: Select contacts list to share
+PL --> User: Render contacts list
+
+User -> PL: Select share contacts list button
+PL --> PL: Build shared contacts list link
+PL --> User: Render contacts list URL and public key
+
+@enduml
