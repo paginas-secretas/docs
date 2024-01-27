@@ -1,0 +1,68 @@
+@startuml domain-model
+
+title "Domain Model - Entities and Relationships"
+
+hide circle
+hide empty methods
+
+entity User
+entity Viewer
+
+' Contact entities declaration for vCard schema based on w3 spec: https://www.w3.org/TR/vcard-rdf/
+
+entity Contact { 
+    name
+    date of birth
+    email address
+    address
+    gender
+}
+
+entity Address {
+    type
+    street
+    location
+    region
+    country name
+    postal code
+}
+
+entity "Phone Number" as PN { 
+    name
+    date of birth
+    email address
+    address
+    gender
+}
+
+enum Gender {
+    Female
+    Male
+    None
+    Other
+    Unknown
+}
+
+enum "Address Type" as AT {
+  Home
+  Work
+}
+
+enum "Phone Number Type" as PNT {
+    Fax
+    Pager
+    SMS
+    Video
+    Voice
+}
+
+entity "Contact List" as CL 
+entity "Asymmetric Encryption" as AE
+
+Contact "1" -- "0..1" Gender: associated to
+Contact "1" -- "1" Gender: associated to
+CL "1" -- "1..*" Contact: records
+User "1" -- "*" CL: creates
+Viewer "*" -- "*" CL: views
+
+@enduml
