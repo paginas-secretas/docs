@@ -9,8 +9,8 @@ This document keeps track of all use cases the project aims to deliver, includin
 |001 - Create contacts list|`User`|`Alpha`|
 |002 - Share contacts list|`User`|`Alpha`|
 |003 - View shared contacts list|`Viewer`|`Alpha`|
-|004 - Save contacts list|`User`|`Alpha`|
-|005 - Import contacts list|`User`|`Alpha`|
+|004 - Save contacts list|`Viewer`|`Alpha`|
+|005 - Import contacts list|`Viewer`|`Alpha`|
 
 ---
 
