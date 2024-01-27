@@ -9,20 +9,6 @@ participant "Contacts Manager API" as CNT #Plum
 participant "Contacts Manager DB" as CNT_DB #Plum
 
 User -> PL: Clicks import contacts list button
-PL --> User: Renders URL prompt
-User -> PL: Inserts URL
-
-PL -> CNT: GET /contacts/<contacts-document-reference>
-CNT -> CNT_DB: Find encrypted contacts list with specific reference
-CNT_DB --> CNT: JSON { encrypted contacts list }
-CNT --> PL: JSON { encrypted contacts list }
-
-PL --> User: Renders public key prompt
-User -> PL: Inserts public key
-
-PL -> Browser: Decrypt contacts list
-Browser --> PL: JSON { contacts list }
-
 PL -> Browser: Generate private and public key
 Browser --> Browser: Save public key in local database
 Browser --> Browser: Save private key in local database
