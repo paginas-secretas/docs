@@ -1,6 +1,6 @@
 @startuml 002-share-contacts-list
 
-title "001 - Share contacts list"
+title "002 - Share contacts list"
 
 actor User
 participant "Platform" as PL #MistyRose
