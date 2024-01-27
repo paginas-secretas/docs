@@ -20,9 +20,10 @@ git_status_before=$(git status)
 
 for file in ${puml_files[@]}; do
     printf "Converting $file to svg\n"
-    java -jar $plantuml_jar_path -tsvg -o "../" "$file"
+    java -jar $plantuml_jar_path -tsvg -o "../" "$file"&
 done
 
+wait
 
 git_status_after=$(git status)
 
