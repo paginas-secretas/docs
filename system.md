@@ -41,3 +41,8 @@ The following table records all design decisions related to system introduction 
 |Use of `SvelteKit` + CSR + GitHub Pages for rendering the UI|We will use *client side rendering* (CSR) with SvelteKit to serve the frontend to users and handle needed requests to the backend in the browser, accessible on GitHub pages. This way we can distribute and deploy the platform in a free manner that users and viewers can access all the time with high availability.|`CST-1`, `IL-1`, `IL-3`|
 |Use of `Cloudflare Workers` built with `TypeScript` for building the `Contacts` API|Cloudflare Workers allow deploying serverless services in a really generous free plan (100K requests per day)|`CST-1`, `IL-1`|
 
+## System Communication
+
+The diagram below describes the system communication as illustrated in a UML components diagram:
+
+![system communication described in a components diagram](src/system/system-communication.svg)

@@ -1,0 +1,45 @@
+@startuml system-communication
+
+title "System Communication - Components and Interfaces"
+
+skinparam {
+    defaultTextAlignment center
+}
+
+!define LightGreen #d5e8d4
+!define LightPurple #e1d5e7
+!define LightPink #FFE4E1
+
+' Components definition
+
+component Browser LightGreen
+
+component "Svelte" as SS <<SvelteKit (CSR)>> LightPink
+interface "Frontend Platform\n(HTML, CSS, JavaScript)" as SS_INT LightPink
+
+component "Contacts API" as CNT <<Cloudflare Worker>> LightPurple
+database "Contacts DB" as CNT_DB <<Git>> LightPurple
+interface "Contacts Lists\n(JSON)" as CNT_INT LightPurple
+interface "Contacts Data\n(JSON)" as CNT_DB_INT LightPurple
+
+' Interfaces offering
+
+SS -up- SS_INT
+
+CNT -up- CNT_INT
+CNT_DB -up- CNT_DB_INT
+
+' Interfaces consumption
+
+'' Browser - Frontend
+Browser --( SS_INT
+
+'' Frontend - Web Services
+SS --( CNT_INT
+
+'' Web Services - Databases
+CNT --( CNT_DB_INT
+
+
+
+@enduml
