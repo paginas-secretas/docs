@@ -1,0 +1,89 @@
+@startuml domain-model
+
+title "Domain Model - Entities and Relationships"
+
+hide circle
+hide empty methods
+
+hide stereotype
+skinparam {
+    ClassHeaderBackgroundColor<<LightRed>> #f8cecc
+    ClassHeaderBackgroundColor<<LightGreen>> #d5e8d4
+    ClassHeaderBackgroundColor<<LightBlue>> #dae8fc
+    ClassHeaderBackgroundColor<<LightYellow>> #fff2cc
+    ClassHeaderBackgroundColor<<LightPurple>> #e1d5e7
+    ClassHeaderBackgroundColor<<LightGray>> #f5f5f5
+    ClassHeaderBackgroundColor<<LightOrange>> #ffcc99
+    ClassBackgroundColor #FFFFFF
+}
+
+entity "User" as USR<<LightRed>> 
+entity "Viewer" as VWR<<LightGreen>>
+entity "Contact List" as CL<<LightBlue>>
+entity "Asymmetric Encryption" as AE <<LightPurple>>
+
+' Contact entities declaration for vCard schema based on w3 spec: https://www.w3.org/TR/vcard-rdf/
+
+entity "Contact" as CNT <<LightBlue>> {
+    name
+    date of birth
+    email address
+}
+
+entity "Address" as ADR <<LightYellow>> {
+    type
+    street
+    location
+    region
+    country name
+    postal code
+}
+
+enum "Address Type" as ADRT <<LightYellow>> {
+  Home
+  Work
+}
+
+entity "Phone Number" as PN <<LightOrange>> { 
+    type
+    value
+}
+
+enum "Phone Number Type" as PNT <<LightOrange>> {
+    Home
+    Work
+    Mobile
+    Other
+    Voice
+}
+
+enum "Gender" as GN <<LightGray>> {
+    Female
+    Male
+    None
+    Other
+    Unknown
+}
+
+note "ECDH - Ed25519" as PAE_NOTE
+
+' Relationships
+
+AE . PAE_NOTE
+
+CNT "1" -down- "0..1" GN: associated to
+CNT "1" -right- "*" ADR: associated to
+CNT "1" -left-> "1..*" PN: has
+
+ADR .. ADRT
+
+PN .. PNT
+
+CL "1" -- "1..*" CNT: records
+CL .up.> AE: encrypted using
+
+USR "1" -- "*" CL: creates
+USR "1" -left- "*" CL: share
+VWR "*" -right- "*" CL: views shared
+
+@enduml
