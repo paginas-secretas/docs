@@ -3,7 +3,7 @@ info:
   title: Contacts Manager API
   description: |-
     Specification of the web API that manages contacts lists
-    
+
     Some useful links:
     - [Use Cases](https://github.com/the-find-it-org/docs/blob/master/usecases.md)
     - [Data Model](https://github.com/the-find-it-org/docs/blob/master/domain.md)
@@ -15,7 +15,7 @@ tags:
   - name: contacts
     description: Manages contacts lists
 paths:
-  /:
+  /contacts:
     post:
       tags:
         - contacts
@@ -26,20 +26,43 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/EncryptedContactsList'
+              $ref: "#/components/schemas/EncryptedContactsList"
         required: true
       responses:
-        '201':
+        "201":
           description: Successful upload
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PartialEncryptedContactsList"
 components:
   schemas:
+    DocumentReference:
+      type: string
+      description: A document reference is the name of the file stored in Contacts Manager DB
+    DocumentHash:
+      type: string
+      description: A document hash is the commit hash that identifies the version of the file stored in Contacts Manager DB
     EncryptedContacts:
+      description: A Base64 string that once decoded reveals the encrypted contacts list
       type: string
       format: base64
     EncryptedContactsList:
+      description: A wrapper for the Base64 string that reveals the encrypted contacts list
       required:
         - contacts
       type: object
       properties:
-        contacts: 
-            $ref: '#/components/schemas/EncryptedContacts'
+        contacts:
+          $ref: "#/components/schemas/EncryptedContacts"
+    PartialEncryptedContactsList:
+      description: The result of an encrypted contacts lists upload/update
+      required:
+        - ref
+        - hash
+      type: object
+      properties:
+        ref:
+          $ref: "#/components/schemas/DocumentReference"
+        hash:
+          $ref: "#/components/schemas/DocumentHash"
