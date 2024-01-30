@@ -1,0 +1,45 @@
+openapi: 3.0.3
+info:
+  title: Contacts Manager API
+  description: |-
+    Specification of the web API that manages contacts lists
+    
+    Some useful links:
+    - [Use Cases](https://github.com/the-find-it-org/docs/blob/master/usecases.md)
+    - [Data Model](https://github.com/the-find-it-org/docs/blob/master/domain.md)
+  license:
+    name: MIT License
+    url: https://github.com/paginas-secretas/contacts-manager/blob/master/LICENSE
+  version: 0.0.1
+tags:
+  - name: contacts
+    description: Manages contacts lists
+paths:
+  /:
+    post:
+      tags:
+        - contacts
+      summary: Uploads a new encrypted contacts list
+      operationId: upload
+      requestBody:
+        description: Encrypted contacts list
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EncryptedContactsList'
+        required: true
+      responses:
+        '201':
+          description: Successful upload
+components:
+  schemas:
+    EncryptedContacts:
+      type: string
+      format: base64
+    EncryptedContactsList:
+      required:
+        - contacts
+      type: object
+      properties:
+        contacts: 
+            $ref: '#/components/schemas/EncryptedContacts'
