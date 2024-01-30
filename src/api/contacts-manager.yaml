@@ -35,6 +35,34 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/PartialEncryptedContactsList"
+        "400":
+          description: Encrypted Contacts List not described in Base64 format
+  /contacts/{ref}:
+    get:
+      tags:
+        - contacts
+      summary: Fetches an encrypted contacts list
+      operationId: fetch
+      parameters:
+        - in: path
+          name: ref
+          required: true
+          schema:
+            $ref: "#/components/schemas/DocumentReference"
+        - in: header
+          name: x-doc-hash
+          required: true
+          schema:
+            $ref: "#/components/schemas/DocumentHash"
+      responses:
+        "200":
+          description: Successful fetch
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EncryptedContactsList"
+        "404":
+          description: Encrypted Contacts List not found for provided identifiers
 components:
   schemas:
     DocumentReference:
