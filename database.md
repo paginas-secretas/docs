@@ -1,4 +1,4 @@
-# api
+# database
 
 This document records all design decisions for the databases used in the system.
 
