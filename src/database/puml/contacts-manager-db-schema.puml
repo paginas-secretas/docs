@@ -1,0 +1,40 @@
+@startuml contacts-manager-db-schema
+
+title "Contacts Manager DB - Schemas"
+
+hide circle
+hide empty methods
+
+hide stereotype
+skinparam {
+    DatabaseBackgroundColor<<LightGreen>> #d5e8d4
+    ClassHeaderBackgroundColor<<LightBlue>> #dae8fc
+    FolderBackgroundColor<<LightYellow>> #fff2cc
+    CloudBackgroundColor<<LightGray>> #f5f5f5
+    FrameBackgroundColor<<LightOrange>> #ffcc99
+    ClassBackgroundColor #FFFFFF
+}
+
+' Schemas definition
+
+cloud "GitHub" <<LightGray>> {
+    left to right direction
+
+    database "Git" <<LightGreen>> {
+        folder "/" <<LightYellow>> {
+            frame "JSON" <<LightOrange>> {
+                entity "Encrypted Contacts List" as ECSJ <<LightBlue>> {
+                    contacts: Base64
+                }
+            }
+        }
+    }
+}
+
+note top of [ECSJ]
+    The file name (without file extension) identifies the document reference.
+    The commit hash identifies the document hash
+    Each file must end with **.ecsj** extension
+end note
+
+@enduml

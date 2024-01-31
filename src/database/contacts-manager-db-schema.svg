@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="473px" preserveAspectRatio="none" style="width:460px;height:473px;background:#FFFFFF;" version="1.1" viewBox="0 0 460 473" width="460px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="29.0679" id="_title" style="stroke:none;stroke-width:1.0;" width="233" x="106.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="223" x="111.5" y="24.9659">Contacts Manager DB - Schemas</text><!--MD5=[52bd4819656a6938484a4a042299c7b0]
+cluster GitHub--><g id="cluster_GitHub"><path d="M76.3728,63.5983 C82.1674,54.128 92.3114,52.4828 98.7143,62.9155 C105.2794,49.7484 112.8579,48.985 123.2561,58.8271 C130.2898,51.8309 137.3461,51.0233 142.0885,61.3221 C146.5785,49.0343 156.8656,48.4327 164.4673,58.1587 C173.3869,47.709 180.7586,49.868 187.6432,60.4057 C193.7121,49.4614 203.1143,51.5762 208.7598,60.8481 C214.3225,50.027 225.6351,46.0679 233.5079,58.3764 C239.3174,48.7146 248.5015,48.3263 255.4507,57.0135 C260.7495,48.7111 269.4015,49.3264 274.1335,57.6504 C283.5171,47.1315 290.3205,48.7845 296.6555,60.7095 C303.9532,51.1951 313.0288,51.7727 319.7683,61.3842 C325.0595,49.6649 333.0334,50.4755 340.8356,58.7367 C348.7694,46.6197 358.4137,48.3005 364.2817,60.7114 C373.5362,51.5013 387.0631,51.0339 391,66.475 C392.0811,66.4974 392.2805,67.3762 391.8257,68.154 C401.6291,75.2885 403.4918,82.1087 392.7746,90.1293 C402.5152,93.3103 406.42,102.7422 397.3208,110.1922 C409.4721,115.3185 409.5653,124.2403 399.9398,131.9838 C414.2791,139.6645 412.5302,148.2693 401.2665,157.2921 C412.4413,165.5271 411.8895,172.6488 399.4245,178.8654 C411.7078,183.3867 412.7564,190.468 403.7352,199.4506 C415.2476,205.3839 416.7346,214.6248 405.9194,222.6594 C413.9136,229.7605 413.0536,238.8443 402.4029,242.6686 C410.7837,250.0306 411.7767,261.0544 399.1526,265.415 C409.4354,270.2472 411.3719,279.042 401.3142,286.0091 C409.6442,294.7146 408.6232,301.5706 397.5626,306.7725 C409.1629,314.8909 406.9971,326.4354 394.6392,331.7496 C404.9684,339.6083 402.5101,346.8479 392.6134,352.7561 C403.9062,365.9714 397.8248,373.6717 384,378.475 C386.324,378.1872 387.4889,379.8227 386.6678,381.9497 C379.6471,391.4474 368.3504,390.5977 362.83,380.156 C356.804,391.6052 349.0679,391.5495 340.5708,382.8916 C333.4427,392.726 325.812,393.7734 318.5063,383.0825 C312.1589,393.4502 303.836,392.2418 297.678,382.8825 C292.1961,393.9616 284.1981,394.2316 275.8404,386.162 C270.2453,396.1726 259.0436,399.598 252.2037,387.4924 C246.6598,399.2947 237.5337,399.7651 230.9542,388.4441 C225.8639,397.2561 216.2788,399.2017 211.2505,388.3819 C203.4124,401.314 191.7967,398.7742 185.3801,386.8994 C178.5247,396.6835 169.8343,396.9267 164.5507,385.3655 C157.4474,393.6137 149.71,395.0594 144.222,383.6915 C136.2037,394.9587 127.3336,395.7944 120.3731,382.6578 C112.7581,393.0999 104.2404,391.9134 97.524,381.6653 C82.8696,393.5913 73.0969,387.2396 68,371.475 C69.8308,370.9653 70.985,371.6036 70.9062,373.6479 C57.6278,368.3135 56.5032,360.0067 66.4991,350.2824 C59.0671,344.7707 58.6914,335.8136 67.8571,331.502 C52.9751,326.5116 52.0704,317.1506 62.7371,306.8533 C53.4199,300.4208 52.3571,292.8481 62.6021,286.2872 C52.9008,281.2601 51.2475,271.7523 61.4242,265.5938 C51.9117,258.9603 50.6655,251.0613 59.885,243.1434 C49.8724,237.7816 47.0457,231.3464 56.0527,222.4605 C44.9034,213.5777 46.4258,205.2567 57.7153,197.8923 C48.5336,190.8974 49.351,181.5863 59.4167,176.0936 C48.8258,168.2761 51.1447,157.8784 63.0538,153.7182 C52.762,147.5576 55.083,137.176 64.831,132.7106 C53.1854,125.4446 53.3335,118.2514 64.9769,111.1428 C55.1389,101.9145 57.4685,94.2777 68.846,88.7083 C56.9404,76.2564 59.9694,66.2564 75,59.475 C77.4579,59.8933 77.9938,61.8219 76.3728,63.5983 " fill="#F5F5F5" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="49" x="205" y="79.4409">GitHub</text></g><!--MD5=[5f36e31e730c5ac50b4a9d55cb78db7d]
+cluster Git--><g id="cluster_Git"><path d="M84,107.475 C84,97.475 229.5,97.475 229.5,97.475 C229.5,97.475 375,97.475 375,107.475 L375,352.475 C375,362.475 229.5,362.475 229.5,362.475 C229.5,362.475 84,362.475 84,352.475 L84,107.475 " fill="#D5E8D4" style="stroke:#181818;stroke-width:1.0;"/><path d="M84,107.475 C84,117.475 229.5,117.475 229.5,117.475 C229.5,117.475 375,117.475 375,107.475 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="20" x="219.5" y="134.4409">Git</text></g><!--MD5=[f63a44afb5dc4cc77b68b8af623d6bd0]
+cluster /--><g id="cluster_/"><path d="M110.5,158.475 L117.5,158.475 A3.75,3.75 0 0 1 120,160.975 L127,183.5429 L348.5,183.5429 A2.5,2.5 0 0 1 351,186.0429 L351,335.975 A2.5,2.5 0 0 1 348.5,338.475 L110.5,338.475 A2.5,2.5 0 0 1 108,335.975 L108,160.975 A2.5,2.5 0 0 1 110.5,158.475 " fill="#FFF2CC" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="108" x2="127" y1="183.5429" y2="183.5429"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="6" x="112" y="175.4409">/</text></g><!--MD5=[023d1783bbd52942d4243b68772c81b7]
+cluster JSON--><g id="cluster_JSON"><rect fill="#FFCC99" height="110" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="195" x="132" y="204.475"/><path d="M177,204.475 L177,216.5429 L167,226.5429 L132,226.5429 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="35" x="135" y="220.4409">JSON</text></g><!--MD5=[4b08f2b84a45203ffee268146df5e961]
+class ECSJ--><g id="elem_ECSJ"><rect codeLine="25" fill="#FFFFFF" height="56.1358" id="ECSJ" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="163" x="148" y="242.475"/><rect fill="#DAE8FC" height="29.0679" rx="2.5" ry="2.5" style="stroke:#DAE8FC;stroke-width:0.5;" width="163" x="148" y="242.475"/><rect fill="#DAE8FC" height="2.5" style="stroke:#DAE8FC;stroke-width:0.5;" width="163" x="148" y="269.0429"/><rect codeLine="25" fill="none" height="56.1358" id="ECSJ" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="163" x="148" y="242.475"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="151" y="262.4409">Encrypted Contacts List</text><line style="stroke:#181818;stroke-width:0.5;" x1="149" x2="310" y1="271.5429" y2="271.5429"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="154" y="290.5088">contacts: Base64</text></g><g id="elem_GMN7"><path d="M6,402.975 L6,466.093 A0,0 0 0 0 6,466.093 L453,466.093 A0,0 0 0 0 453,466.093 L453,412.975 L443,402.975 L233.5,402.975 L229.5,298.635 L225.5,402.975 L6,402.975 A0,0 0 0 0 6,402.975 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M443,402.975 L443,412.975 L453,412.975 L443,402.975 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="426" x="12" y="421.872">The file name (without file extension) identifies the document reference.</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="280" x="12" y="439.578">The commit hash identifies the document hash</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="137" x="12" y="457.284">Each file must end with</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="29" x="152" y="457.284">.ecsj</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="184" y="457.284">extension</text></g><!--MD5=[ed8580f5f53f8c083e4bbf992287a6d4]
+@startuml contacts-manager-db-schema
+
+title "Contacts Manager DB - Schemas"
+
+hide circle
+hide empty methods
+
+hide stereotype
+skinparam {
+    DatabaseBackgroundColor<<LightGreen>> #d5e8d4
+    ClassHeaderBackgroundColor<<LightBlue>> #dae8fc
+    FolderBackgroundColor<<LightYellow>> #fff2cc
+    CloudBackgroundColor<<LightGray>> #f5f5f5
+    FrameBackgroundColor<<LightOrange>> #ffcc99
+    ClassBackgroundColor #FFFFFF
+}
+
+' Schemas definition
+
+cloud "GitHub" <<LightGray>> {
+    left to right direction
+
+    database "Git" <<LightGreen>> {
+        folder "/" <<LightYellow>> {
+            frame "JSON" <<LightOrange>> {
+                entity "Encrypted Contacts List" as ECSJ <<LightBlue>> {
+                    contacts: Base64
+                }
+            }
+        }
+    }
+}
+
+note top of [ECSJ]
+    The file name (without file extension) identifies the document reference.
+    The commit hash identifies the document hash
+    Each file must end with **.ecsj** extension
+end note
+
+@enduml
+
+@startuml contacts-manager-db-schema
+
+title "Contacts Manager DB - Schemas"
+
+hide circle
+hide empty methods
+
+hide stereotype
+skinparam {
+    DatabaseBackgroundColor<<LightGreen>> #d5e8d4
+    ClassHeaderBackgroundColor<<LightBlue>> #dae8fc
+    FolderBackgroundColor<<LightYellow>> #fff2cc
+    CloudBackgroundColor<<LightGray>> #f5f5f5
+    FrameBackgroundColor<<LightOrange>> #ffcc99
+    ClassBackgroundColor #FFFFFF
+}
+
+
+cloud "GitHub" <<LightGray>> {
+    left to right direction
+
+    database "Git" <<LightGreen>> {
+        folder "/" <<LightYellow>> {
+            frame "JSON" <<LightOrange>> {
+                entity "Encrypted Contacts List" as ECSJ <<LightBlue>> {
+                    contacts: Base64
+                }
+            }
+        }
+    }
+}
+
+note top of [ECSJ]
+    The file name (without file extension) identifies the document reference.
+    The commit hash identifies the document hash
+    Each file must end with **.ecsj** extension
+end note
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 18:01:30 WEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>
