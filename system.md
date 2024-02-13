@@ -34,7 +34,7 @@ The following table records all design decisions related to system introduction 
 
 |Design Decision|Rationale|Drivers Addressed|
 |---------------|---------|-----------------|
-|Use of `ECDH - Ed25519` encryption algorithm to generate the public/private key pair and encrypt the contacts list with them.|The ECDH - Ed25519 encryption algorithm is a secure asymmetric key algoritm that provides a strong encryption layer, being resistant to timing and bruteforce attacks. It's used by cryptocurrencies like Monero.|`CRN-1`, `CRN-2`, `CRN-3`, `IL-2`|
+|Use of `RSA - OAEP` 2048 bits encryption algorithm to generate the public/private key pair and encrypt the contacts list with them.|The RSA-OAEP encryption scheme is a secure asymmetric key algoritm that provides a strong encryption layer, being resistant to timing and bruteforce attacks, and is available in browsers crypto API.|`CRN-1`, `CRN-2`, `CRN-3`, `IL-2`, `IL-3`.|
 |Use of `Git` as the contacts database|Git is essentially a file-based versioned database, providing history through commits. By having a versioned database where each file is a contacts list, if a bad actor tries to forge the information of a file, it will create an update of this file, and the previous version is not lost. This way we can ensure that the contacts list the user sees, is always the one that he created.|`CRN-3`|
 |Use GitHub as the Git database provider|GitHub can be leveraged as a free host for Git repositories. Even better, free users can create private repositories and thus the encrypted contacts lists files are not public to the world|`CRN-2`, `CST-1`|
 |Use of `Svelte` as the frontend framework for building the platform UI|We know Svelte, we like Svelte, and Svelte is performant. Enough said!|`IL-3`|
