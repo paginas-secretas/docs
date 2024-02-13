@@ -14,11 +14,13 @@ PL -> CNT: GET /contacts/<contacts-document-reference>
 CNT -> CNT_DB: Find encrypted contacts list with specific reference
 CNT_DB --> CNT: JSON { encrypted contacts list }
 CNT --> PL: JSON { encrypted contacts list }
-PL --> User: Renders public key prompt
+PL --> User: Renders private key prompt
 
-User -> PL: Inserts public key
-PL -> Browser: Decrypt contacts list
-Browser --> PL: JSON { contacts list }
-PL --> User: Render contacts list page
+User -> PL: Chooses generate new key option
+PL -> Browser: Generate private and public key
+Browser --> Browser: Save public key in local database
+Browser --> Browser: Save private key in local database
+Browser --> PL: Returns (public, private) key
+PL --> User: Render prompt to share public key with contact list owner
 
 @enduml

@@ -15,15 +15,14 @@ User -> PL: Clicks create contacts list button
 PL -> Browser: Generate private and public key
 Browser --> Browser: Save public key in local database
 Browser --> Browser: Save private key in local database
-Browser --> Browser: Download private key
-Browser --> PL: Returns public key
+Browser --> PL: Returns (public, private) key
 PL --> User: Render contacts list page
 
 User -> PL: Fills contact information
 PL -> Browser: Save contact in local database
 
 User -> PL: Clicks save contacts button
-PL -> Browser: Encrypt local database with private key
+PL -> Browser: Encrypt local database with public key
 Browser --> PL: JSON { encrypted contacts list }
 PL -> CNT: POST /contacts JSON { encrypted contacts list }
 CNT --> CNT: Generate document reference
@@ -31,7 +30,6 @@ CNT -> CNT_DB: Save encrypted contacts list using document reference
 CNT_DB --> CNT: Saved document hash (commit hash)
 CNT --> PL: JSON { document reference, document hash }
 PL -> Browser: Save document reference and hash in local database
-PL --> PL: Generate shared contacts list link
-PL --> User: Render saved contacts list link
+PL --> User: Render saved contacts list information
 
 @enduml
