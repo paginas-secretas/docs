@@ -1,0 +1,16 @@
+@startuml decryption-flow
+
+title "Decryption Flow"
+
+participant "Platform" as PL #MistyRose
+participant Browser #MintCream
+
+PL -> Browser: Request decryption of contacts list
+
+Browser --> Browser: Decode encrypted contacts list **base64** to bit string
+Browser --> Browser: Decrypt private (symmetric) key using **private (asymmetric)** key
+Browser --> Browser: Decrypt encrypted contacts list key using **private (symmetric)** key
+
+Browser --> PL: JSON { contacts list, (symmetric) private key }
+
+@enduml

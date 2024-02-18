@@ -1,0 +1,23 @@
+@startuml keys-generation-flow
+
+title "Keys Generation Flow"
+
+participant "Platform" as PL #MistyRose
+participant Browser #MintCream
+participant "Web Crypto" as WC #Orange
+PL -> Browser: Request generation of symmetric key
+
+Browser --> Browser: Generate random **AES-GCM 256** key using **Web Crypto** API
+Browser -> WC: <i>generateKey(AES-GCM-256)</i>
+WC --> Browser: <i>CryptoKey</i>
+
+Browser --> PL: Generated key
+
+PL -> Browser: Request generation of asymmetric key
+
+Browser --> Browser: Generate random **RSA-OAEP 2048** key pair using **Web Crypto** API
+Browser -> WC: <i>generateKey(RSA-OAEP-2048)</i>
+WC --> Browser: <i>CryptoKeyPair</i>
+
+Browser --> PL: Generated key pair
+@enduml
