@@ -5,6 +5,8 @@ title "002 - Share contacts list"
 actor User
 participant "Platform" as PL #MistyRose
 participant Browser #MintCream
+participant "Contacts Manager API" as CNT #Plum
+participant "Contacts Manager DB" as CNT_DB #Plum
 
 User -> Browser : Open platform webpage
 Browser -> PL : GET /index.html
@@ -14,6 +16,22 @@ User -> PL: Select contacts list to share
 PL --> User: Render contacts list
 
 User -> PL: Select share contacts list button
+PL --> User: Prompt sharing user public (asymmetric) key
+User -> PL: Inserts sharing user public key
+
+PL -> Browser: Generate private key (symmetric)
+Browser --> PL: Returns (private) key
+
+PL -> Browser: Encrypt contacts list with private (symmetric) key
+PL -> Browser: Encrypt private (symmetric) key with user public (asymmetric) key
+Browser --> PL: JSON { encrypted contacts list, encrypted (symmetric) private key }
+
+PL -> CNT: POST /contacts JSON { encrypted contacts list, encrypted (symmetric) private key }
+CNT --> CNT: Generate document reference
+CNT -> CNT_DB: Save encrypted contacts list using document reference
+CNT_DB --> CNT: Saved document hash (commit hash)
+CNT --> PL: JSON { document reference, document hash }
+
 PL --> PL: Build shared contacts list link
 PL --> User: Render contacts list URL
 

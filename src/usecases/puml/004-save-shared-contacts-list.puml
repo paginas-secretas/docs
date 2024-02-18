@@ -1,0 +1,13 @@
+@startuml 004-save-shared-contacts-list
+
+title "004 - Save shared contacts list"
+
+actor User
+participant Browser #MintCream
+participant "Platform" as PL #MistyRose
+
+User -> PL: Select save contacts list button
+PL -> Browser: Save (encrypted contacts list, encrypted private (symmetric) key) in local storage
+Browser --> Browser: Save (encrypted contacts list, encrypted private (symmetric) key) in local database using shared link
+
+@enduml

@@ -2,7 +2,7 @@
 
 title "003 - View shared contacts list"
 
-actor User
+actor "Viewer" as User
 participant Browser #MintCream
 participant "Platform" as PL #MistyRose
 participant "Contacts Manager API" as CNT #Plum
@@ -12,15 +12,17 @@ User -> Browser: Open shared contacts list link
 Browser -> PL: GET /<contacts-document-reference>
 PL -> CNT: GET /contacts/<contacts-document-reference>
 CNT -> CNT_DB: Find encrypted contacts list with specific reference
-CNT_DB --> CNT: JSON { encrypted contacts list }
-CNT --> PL: JSON { encrypted contacts list }
-PL --> User: Renders private key prompt
+CNT_DB --> CNT: JSON { encrypted contacts list, encrypted (symmetric) private key }
+CNT --> PL: JSON { encrypted contacts list, encrypted (symmetric) private key }
 
-User -> PL: Chooses generate new key option
-PL -> Browser: Generate private and public key
-Browser --> Browser: Save public key in local database
-Browser --> Browser: Save private key in local database
-Browser --> PL: Returns (public, private) key
-PL --> User: Render prompt to share public key with contact list owner
+PL --> User: Renders private key prompt
+User -> PL: Inserts private key
+PL -> Browser: Decrypts symmetric private key
+Browser --> PL: Decrypted symmetric private key
+
+PL -> Browser: Decrypt encrypted contacts list
+Browser --> PL: Decrypted contacts list
+
+PL --> User: Render contacts list page
 
 @enduml
