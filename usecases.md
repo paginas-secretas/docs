@@ -85,7 +85,7 @@ This use case can only be executed after use case [#003](#003---view-shared-cont
 
 - N/A
 
-![uml sequence diagram for use case #004](src/usecases/004-save-contacts-list.svg)
+![uml sequence diagram for use case #004](src/usecases/004-save-shared-contacts-list.svg)
 
 ## 005 - Import contacts list
 
