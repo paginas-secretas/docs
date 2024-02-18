@@ -14,12 +14,14 @@ skinparam {
     ClassHeaderBackgroundColor<<LightPurple>> #e1d5e7
     ClassHeaderBackgroundColor<<LightGray>> #f5f5f5
     ClassHeaderBackgroundColor<<LightOrange>> #ffcc99
+    ClassHeaderBackgroundColor<<Purple>> #a020f050
     ClassBackgroundColor #FFFFFF
 }
 
 entity "User" as USR<<LightRed>> 
 entity "Viewer" as VWR<<LightGreen>>
 entity "Contact List" as CL<<LightBlue>>
+entity "Symmetric Encryption" as SE <<Purple>>
 entity "Asymmetric Encryption" as AE <<LightPurple>>
 
 ' Contact entities declaration for vCard schema based on w3 spec: https://www.w3.org/TR/vcard-rdf/
@@ -65,11 +67,13 @@ enum "Gender" as GN <<LightGray>> {
     Unknown
 }
 
-note "ECDH - Ed25519" as PAE_NOTE
+note "RSA - OAEP (2048)" as PAE_NOTE
+note "AES - GCM (256)" as PSE_NOTE
 
 ' Relationships
 
-AE . PAE_NOTE
+AE .left. PAE_NOTE
+SE . PSE_NOTE
 
 CNT "1" -down- "0..1" GN: associated to
 CNT "1" -right- "*" ADR: associated to
@@ -80,7 +84,8 @@ ADR .. ADRT
 PN .. PNT
 
 CL "1" -- "1..*" CNT: records
-CL .up.> AE: encrypted using
+CL .up.> SE: encrypted using
+CL .up.> AE: shared securely using
 
 USR "1" -- "*" CL: creates
 USR "1" -left- "*" CL: share
