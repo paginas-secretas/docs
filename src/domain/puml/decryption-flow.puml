@@ -9,7 +9,7 @@ PL -> Browser: Request decryption of contacts list
 
 Browser --> Browser: Decode encrypted contacts list **base64** to bit string
 Browser --> Browser: Decrypt private (symmetric) key using **private (asymmetric)** key
-Browser --> Browser: Decrypt encrypted contacts list key using **private (symmetric)** key
+Browser --> Browser: Decrypt encrypted contacts list key using **private (symmetric)** key and IV
 
 Browser --> PL: JSON { contacts list, (symmetric) private key }
 
