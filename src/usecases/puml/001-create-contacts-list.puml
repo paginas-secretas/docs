@@ -14,12 +14,9 @@ Browser -> PL : GET /index.html
 User -> PL: Clicks create contacts list button
 
 PL -> Browser: Generate private key (symmetric)
-Browser --> Browser: Save private key in local database
 Browser --> PL: Returns (private) key
 
 PL -> Browser: Generate private and public key (asymmetric)
-Browser --> Browser: Save public key in local database
-Browser --> Browser: Save private key in local database
 Browser --> PL: Returns (public, private) key
 
 PL --> User: Render contacts list page
@@ -39,7 +36,8 @@ CNT -> CNT_DB: Save encrypted contacts list using document reference
 CNT_DB --> CNT: Saved document hash (commit hash)
 CNT --> PL: JSON { document reference, document hash }
 
-PL -> Browser: Save document reference and hash in local database
+PL -> Browser: Save document in local database 
+Browser --> Browser: save('ref/hash', '{asymmetric: ..., symmetric: ..., contactsList: ...}')
 PL --> User: Render saved contacts list information
 
 @enduml

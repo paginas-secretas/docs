@@ -8,6 +8,6 @@ participant "Platform" as PL #MistyRose
 
 User -> PL: Select save contacts list button
 PL -> Browser: Save (encrypted contacts list, encrypted private (symmetric) key) in local storage
-Browser --> Browser: Save (encrypted contacts list, encrypted private (symmetric) key) in local database using shared link
+Browser --> Browser: save('ref/hash', '{symmetric: ..., contactsList: ...}')
 
 @enduml
