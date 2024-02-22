@@ -39,7 +39,7 @@ This use case enables users to share their contacts list. Users need a public ke
 
 **Inputs**:
 
-- 1x document refernece
+- 1x document reference
 - 1x document hash
 - 1x shared user public key (asymmetric)
 
